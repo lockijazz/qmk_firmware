@@ -7,9 +7,15 @@
 #define _ADJUST 3
 #define PREV_TAB RGUI(LSFT(KC_LBRACKET))
 #define NEXT_TAB RGUI(LSFT(KC_RBRACKET))
-#define CMD_P RGUI(KC_P)
-#define CMD_N RGUI(KC_N)
+#define PRINT RGUI(KC_P)
+#define NEW RGUI(KC_N)
 #define COMMENT RGUI(KC_SLASH)
+#define REDO RGUI(KC_Y)
+#define UNDERLINE RGUI(KC_U)
+#define ITALICS RGUI(KC_I)
+#define OPEN RGUI(KC_O)
+#define HLINE RGUI(KC_L)          // highlight line
+#define SSEARCH RGUI(KC_SPACE)    // spotlight search
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
@@ -57,13 +63,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX,PREV_TAB,NEXT_TAB, XXXXXXX, XXXXXXX, KC_F12,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-      XXXXXXX, XXXXXXX, XXXXXXX,  KC_UP,  XXXXXXX, KC_VOLU,                             KC_GRV, KC_PPLS, KC_MINS, XXXXXXX,  CMD_P,  XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX,  KC_UP,  XXXXXXX, KC_VOLU,                             KC_GRV, KC_PPLS, KC_MINS,   OPEN,    PRINT,  XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
       XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN,KC_RIGHT, KC_VOLD,                            KC_TILD, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, CMD_N,   KC_PEQL, KC_UNDS, XXXXXXX, COMMENT, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          SSEARCH,   NEW,   KC_PEQL, KC_UNDS, XXXXXXX, COMMENT, XXXXXXX,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX
+                                    XXXXXXX, XXXXXXX, XXXXXXX,                   SSEARCH, XXXXXXX, XXXXXXX
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
