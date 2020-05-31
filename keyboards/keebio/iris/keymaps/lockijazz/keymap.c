@@ -7,6 +7,9 @@
 #define _ADJUST 3
 #define PREV_TAB RGUI(LSFT(KC_LBRACKET))
 #define NEXT_TAB RGUI(LSFT(KC_RBRACKET))
+#define CMD_P RGUI(KC_P)
+#define CMD_N RGUI(KC_N)
+#define COMMENT RGUI(KC_SLASH)
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
@@ -54,11 +57,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX,PREV_TAB,NEXT_TAB, XXXXXXX, XXXXXXX, KC_F12,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-      XXXXXXX, XXXXXXX, XXXXXXX,  KC_UP,  XXXXXXX, KC_VOLU,                             KC_GRV, KC_PPLS, KC_MINS, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX,  KC_UP,  XXXXXXX, KC_VOLU,                             KC_GRV, KC_PPLS, KC_MINS, XXXXXXX,  CMD_P,  XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
       XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN,KC_RIGHT, KC_VOLD,                            KC_TILD, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, KC_PEQL, KC_UNDS, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, CMD_N,   KC_PEQL, KC_UNDS, XXXXXXX, COMMENT, XXXXXXX,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
